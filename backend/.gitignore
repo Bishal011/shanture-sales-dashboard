@@ -1,0 +1,3 @@
+# Git ignore for backend
+node_modules/
+.env
