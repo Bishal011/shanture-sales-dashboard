@@ -1,11 +1,3 @@
-I can certainly provide a complete `README.md` file for your project. This file is crucial for documenting your application and is a standard part of any professional project.
-
-Just copy the content below and save it as `README.md` in the root of your `shanture-sales-dashboard` folder.
-
------
-
-### `README.md`
-
 ```markdown
 # Shanture Sales Analytics Dashboard
 
