@@ -1,0 +1,163 @@
+/* General body and app styling for a professional dark-blue theme */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0d1a2f; /* Deep, professional blue */
+  color: #e0e0e0;
+  transition: background-color 0.5s ease;
+  min-height: 100vh;
+}
+
+.App {
+  padding: 30px 20px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: #00bcd4; /* Brighter accent color for contrast */
+  margin-bottom: 40px;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Date picker styling */
+.date-picker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.date-picker-label {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #a0a8b4; /* Soft gray for readability */
+}
+
+.react-datepicker-wrapper input {
+  padding: 12px 20px;
+  border: 1px solid #2e3e5c;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: #1a2a43;
+  color: #e0e0e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.react-datepicker-wrapper input:focus {
+  outline: none;
+  border-color: #00bcd4;
+  box-shadow: 0 0 0 4px rgba(0, 188, 212, 0.3);
+}
+
+/* Loading state text */
+.loading-text {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #757575;
+  padding: 80px;
+  animation: pulse 1.5s infinite;
+}
+
+/* Chart container layout */
+.chart-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+/* Individual chart card styling */
+.chart-card {
+  background: linear-gradient(135deg, #1a2a43, #121f35);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid #2e3e5c;
+  color: #ffffff; /* This makes the font inside the card white */
+}
+
+.chart-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 188, 212, 0.2), 0 0 20px rgba(0, 188, 212, 0.1);
+}
+
+.echarts-for-react {
+  height: 450px !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .App {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .date-picker-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .date-picker-label {
+    text-align: center;
+  }
+  
+  .chart-card {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .chart-container {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+
+@media (min-width: 1201px) {
+  .chart-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
