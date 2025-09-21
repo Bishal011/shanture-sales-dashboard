@@ -117,3 +117,4 @@ The backend provides the following RESTful API endpoints, which are consumed by 
 * `GET /api/analytics/region-sales`: Retrieves total revenue and orders grouped by region.
 
 ````
+<img width="1700" height="1000" alt="Screenshot 2025-09-21 130323" src="https://github.com/user-attachments/assets/bce85220-afb9-4999-9cf6-50989d51c1f1" />
